@@ -38,9 +38,10 @@ public class UserController {
         return ResultGenerator.genSuccessResult();
     }
 
-    @GetMapping("/{id}")
-    public Result detail(@PathVariable Integer id) {
-        User user = userService.findById(id);
+    @GetMapping("/{test}")
+    public Result detail(@PathVariable Integer test) {
+        User user = userService.findById(test);
+//        User user = userService.findBy('getId',test);
         return ResultGenerator.genSuccessResult(user);
     }
 
